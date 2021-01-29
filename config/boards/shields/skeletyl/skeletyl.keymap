@@ -81,11 +81,12 @@
 			>;
 		};
 
+# might need qwerty on a non-default layer to enable using &to to switch between qwerty and colemak-dhm?
 		nav {
 			bindings = <
-&none &none &none &none &bootloader &none    &none    &none  &none     &none
+&to 0 &none &none &none &bootloader &none    &none    &none  &none     &none
 &none &none &none &none &none       &kp LEFT &kp DOWN &kp UP &kp RIGHT &none
-&none &none &none &none &none       &none    &none    &none  &none     &none
+&to 1 &none &none &none &none       &none    &none    &none  &none     &none
                   &none &none       &none    &none    &none  &none
 			>;
 		};
