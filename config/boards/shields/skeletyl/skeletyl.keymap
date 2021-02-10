@@ -45,6 +45,15 @@
 			flavor = "balanced";
 			bindings = <&kp>, <&kp>;
 		};
+
+		mlt: layer_tap {
+			compatible = "zmk,behavior-hold-tap";
+			label = "LAYER_TAP";
+			#binding-cells = <2>;
+			tapping_term_ms = <150>;
+			flavor = "balanced";
+			bindings = <&mo>, <&kp>;
+		};
 	};
 	
 	keymap {
@@ -64,7 +73,7 @@
 &kp Q       &kp W      &kp F       &kp P      &kp B       &kp J   &kp L       &kp U       &kp Y      &kp SQT
 &hm LCTRL A &hm LALT R &hm LSHFT S &hm LCMD T &kp G       &kp M   &hm RCMD N  &hm RSHFT E &hm RALT I &hm RCTRL O
 &kp Z       &kp X      &kp C       &kp D      &kp V       &kp K   &kp H       &kp COMMA   &kp DOT    &kp FSLH
-                       &kp CAPS    &mo SYM    &none       &mo NUM &kp SPACE   &mo NAV
+                       &kp CAPS    &mo SYM    &mo NUM     &mo NUM &kp SPACE   &mo NAV
 			>;
 		};
 
