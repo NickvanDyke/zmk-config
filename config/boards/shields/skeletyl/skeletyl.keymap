@@ -65,7 +65,7 @@
 &kp Q       &kp W      &kp E       &kp R      &kp T       &kp Y   &kp U       &kp I       &kp O      &kp P
 &hm LCTRL A &hm LALT S &hm LSHFT D &hm LCMD F &kp G       &kp H   &hm RCMD J  &hm RSHFT K &hm RALT L &hm RCTRL SQT
 &kp Z       &kp X      &kp C       &kp V      &kp B       &kp N   &kp M       &kp COMMA   &kp DOT    &kp FSLH
-                       &kp CAPS    &mo SYM    &mo SYS       &mo NUM &kp SPACE   &mo NAV
+                       &kp CAPS    &mo SYM    &mo NUM     &mo SYS &kp SPACE   &mo NAV
 			>;
 		};
 
@@ -98,19 +98,19 @@
 
 		nav {
 			bindings = <
-&none     &none    &kp LA(RIGHT) &none    &none            &none    &none     &none  &none     &none
-&kp LCTRL &kp LALT &kp LSHFT     &kp LCMD &none            &kp LEFT &kp DOWN  &kp UP &kp RIGHT &none
-&none     &none    &none         &none    &kp LA(LEFT)     &kp HOME &kp PG_UP &kp PG_DN &kp END &none
-                   &none         &none    &none            &none    &none     &none
+&none     &none    &kp LA(RIGHT) &none    &none            &none    &none     &none     &none     &none
+&kp LCTRL &kp LALT &kp LSHFT     &kp LCMD &none            &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &none
+&none     &none    &none         &none    &kp LA(LEFT)     &kp HOME &kp PG_DN &kp PG_UP &kp END &none
+                   &trans        &trans   &trans           &trans   &trans    &trans
 			>;
 		};
 
 		sys {
 			bindings = <
-&bt BT_CLR &none     &none &none       &none         &none       &none       &none &none &none
-&bt BT_PRV &kp K_PWR &none &none       &none         &none       &none       &none &none &none
-&bt BT_NXT &none     &none &none       &none         &none       &none       &none &none &none
-                     &none &bootloader &none         &none       &bootloader &none
+&bt BT_CLR &none     &none       &none       &none         &none &none &none &none &none
+&bt BT_PRV &kp K_PWR &none       &none       &none         &none &none &none &none &none
+&bt BT_NXT &none     &none       &none       &none         &none &none &none &none &none
+                     &bootloader &none       &none         &none &none &none
 			>;
 		};
 	};
