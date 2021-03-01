@@ -2,6 +2,8 @@
 #include "dt-bindings/zmk/keys.h"
 #include "dt-bindings/zmk/bt.h"
 
+#define QWERTY 0
+#define COLEMAK 1
 #define SYM 2
 #define NUM 3
 #define NAV 4
@@ -71,10 +73,10 @@
 
 		colemak-dhm {
 			bindings = <
-&kp Q       &kp W      &kp F       &kp P      &kp B       &kp J   &kp L       &kp U       &kp Y      &kp SQT
-&hm LCTRL A &hm LALT R &hm LSHFT S &hm LCMD T &kp G       &kp M   &hm RCMD N  &hm RSHFT E &hm RALT I &hm RCTRL O
-&kp Z       &kp X      &kp C       &kp D      &kp V       &kp K   &kp H       &kp COMMA   &kp DOT    &kp FSLH
-                       &kp CAPS    &mo SYM    &mo NUM     &mo NUM &kp SPACE   &mo NAV
+&kp Q       &kp W      &kp F       &kp P      &kp B       &kp J &kp L            &kp U       &kp Y      &kp SQT
+&hm LCTRL A &hm LALT R &hm LSHFT S &hm LCMD T &kp G       &kp M &hm RCMD N       &hm RSHFT E &hm RALT I &hm RCTRL O
+&kp Z       &kp X      &kp C       &kp D      &kp V       &kp K &kp H            &kp COMMA   &kp DOT    &kp FSLH
+                       &kp CAPS    &mo SYM    &mo SYS     &none &mlt NUM SPACE   &mo NAV
 			>;
 		};
 
@@ -107,10 +109,10 @@
 
 		sys {
 			bindings = <
-&bt BT_CLR &none     &none       &none  &none         &none &none &none &none &none
-&bt BT_PRV &kp K_PWR &none       &none  &none         &none &none &none &none &none
-&bt BT_NXT &none     &none       &none  &none         &none &none &none &none &none
-                     &bootloader &reset &trans        &none &none &none
+&bt BT_CLR &none     &none       &none  &to QWERTY     &none &none &none &none &none
+&bt BT_PRV &kp K_PWR &none       &none  &none          &none &none &none &none &none
+&bt BT_NXT &none     &none       &none  &to COLEMAK    &none &none &none &none &none
+                     &bootloader &reset &trans         &none &none &none
 			>;
 		};
 	};
