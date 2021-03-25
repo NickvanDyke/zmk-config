@@ -92,8 +92,8 @@
 		num {
 			bindings = <
 &none     &kp F7      &kp F8       &kp F9      &none       &none   &kp N7      &kp N8       &kp N9      &none
-&kp LCTRL &hm LALT F4 &hm LSHFT F5 &hm RCMD F6 &none       &none   &hm RCMD N4 &hm RSHFT N5 &hm RALT N6 &kp RCTRL
-&none     &kp F1      &kp F2       &kp F3      &none       &kp N0  &kp N1      &kp N2       &kp N3      &trans 
+&kp LCTRL &hm LALT F4 &hm LSHFT F5 &hm RCMD F6 &none       &kp N0  &hm RCMD N4 &hm RSHFT N5 &hm RALT N6 &hm RCTRL DOT
+&none     &kp F1      &kp F2       &kp F3      &none       &none   &kp N1      &kp N2       &kp N3      &trans 
                       &trans       &trans      &trans      &trans  &trans      &trans
 			>;
 		};
