@@ -4,8 +4,8 @@
 
 #define QWERTY 0
 #define COLEMAK 1
-#define SYM 2
-#define NUM 3
+#define NUM 2
+#define SYM 3
 #define NAV 4
 #define SYS 5
 
@@ -80,21 +80,21 @@
 			>;
 		};
 
-		sym {
-			bindings = <
-&kp CARET &kp LBRC &kp RBRC &kp DLLR  &none       &none    &kp HASH  &kp UNDER &kp STAR &kp PRCNT
-&kp DQT   &kp LPAR &kp RPAR &kp COLON &kp SEMI    &none    &kp EQUAL &kp MINUS &kp PLUS &kp EXCL
-&kp TILDE &kp AMPS &kp PIPE &kp GRAVE &kp LBKT    &kp RBKT &kp AT    &kp LT    &kp GT   &kp BSLH
-                   &trans   &trans    &trans      &trans   &trans    &trans
-			>;
-		};
-
 		num {
 			bindings = <
 &none     &kp F7      &kp F8       &kp F9      &none       &none   &kp N7      &kp N8       &kp N9      &none
 &kp LCTRL &hm LALT F4 &hm LSHFT F5 &hm RCMD F6 &none       &kp N0  &hm RCMD N4 &hm RSHFT N5 &hm RALT N6 &hm RCTRL DOT
 &none     &kp F1      &kp F2       &kp F3      &none       &none   &kp N1      &kp N2       &kp N3      &trans 
                       &trans       &trans      &trans      &trans  &trans      &trans
+			>;
+		};
+
+		sym {
+			bindings = <
+&kp CARET &kp LBRC &kp RBRC &kp DLLR  &none       &none    &kp HASH  &kp UNDER &kp STAR &kp PRCNT
+&kp DQT   &kp LPAR &kp RPAR &kp COLON &kp SEMI    &none    &kp EQUAL &kp MINUS &kp PLUS &kp EXCL
+&kp TILDE &kp AMPS &kp PIPE &kp GRAVE &kp LBKT    &kp RBKT &kp AT    &kp LT    &kp GT   &kp BSLH
+                   &trans   &trans    &trans      &trans   &trans    &trans
 			>;
 		};
 
