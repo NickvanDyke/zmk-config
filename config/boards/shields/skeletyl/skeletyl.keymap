@@ -67,7 +67,7 @@
 &kp Q       &kp W      &kp E       &kp R      &kp T            &kp Y          &kp U      &kp I       &kp O      &kp P
 &hm LCTRL A &hm LALT S &hm LSHFT D &hm LCMD F &kp G            &kp H          &hm RCMD J &hm RSHFT K &hm RALT L &hm RCTRL SQT
 &kp Z       &kp X      &kp C       &kp V      &kp B            &kp N          &kp M      &kp COMMA   &kp DOT    &kp FSLH
-                       &kp CAPS    &mo SYM    &mlt SYS TAB     &mlt NAV ENTER &kp SPACE  &mlt NUM BSPC
+                       &kp CAPS    &mo SYM    &mo SYS          &mo NAV        &kp SPACE  &mo NUM
 			>;
 		};
 
@@ -109,10 +109,10 @@
 
 		sys {
 			bindings = <
-&bt BT_CLR &none     &none       &none  &to QWERTY     &none &none &none &none &none
-&bt BT_PRV &kp K_PWR &none       &none  &none          &none &none &none &none &none
-&bt BT_NXT &none     &none       &none  &to COLEMAK    &none &none &none &none &none
-                     &bootloader &reset &trans         &none &none &none
+&bt BT_NXT &bt BT_SEL 0 &bt BT_SEL 1 &none  &to QWERTY     &none &none &none &none &none
+&bt BT_PRV &kp K_PWR    &none        &none  &none          &none &none &none &none &none
+&bt BT_CLR &none        &none        &none  &to COLEMAK    &none &none &none &none &none
+                        &bootloader  &reset &trans         &none &none &none
 			>;
 		};
 	};
