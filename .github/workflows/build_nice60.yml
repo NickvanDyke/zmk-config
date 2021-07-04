@@ -36,7 +36,7 @@ jobs:
       - name: Initialize workspace (west init)
         run: west init -l config
       - name: Update modules (west update)
-        rn: west update
+        run: west update
       - name: Export Zephyr CMake package (west zephyr-export)
         run: west zephyr-export
       - name: Prepare variables
