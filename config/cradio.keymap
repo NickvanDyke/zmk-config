@@ -40,11 +40,11 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(esc, &kp ESC, 13 14)
-        COMBO(tab, &kp TAB, 23 24)
+        COMBO(esc, &kp ESC, 11 12)
+        COMBO(tab, &kp TAB, 12 13)
 
-        COMBO(bspc, &kp BSPC, 15 16)
-        COMBO(enter, &kp ENTER, 25 26)
+        COMBO(bspc, &kp BSPC, 17 18)
+        COMBO(enter, &kp ENTER, 16 17)
 
         // Symbols
         // top-middle
@@ -63,19 +63,19 @@
         COMBO(tilde, &kp TILDE, 11 21)
         COMBO(quote, &kp SQT, 12 22)
         COMBO(dquote, &kp DQT, 13 23)
-        COMBO(equal, &kp EQUAL, 14 24)
+        COMBO(under, &kp UNDER, 14 24)
         
-        COMBO(under, &kp UNDER, 15 25)
+        COMBO(plus, &kp PLUS, 15 25)
         COMBO(minus, &kp MINUS, 16 26)
-        COMBO(plus, &kp PLUS, 17 27)
+        COMBO(equal, &kp EQUAL, 17 27)
         COMBO(pipe, &kp PIPE, 18 28)
         COMBO(backslash, &kp BSLH, 19 29)
 
         // cols 7-8
-        COMBO(lt, &kp LT, 6 7)
-        COMBO(gt, &kp GT, 7 8)
-        COMBO(lparen, &kp LPAR, 16 17)
-        COMBO(rparen, &kp RPAR, 17 18)
+        /// COMBO(lt, &kp LT, 6 7)
+        /// COMBO(gt, &kp GT, 7 8)
+        COMBO(lparen, &kp LPAR, 6 7)
+        COMBO(rparen, &kp RPAR, 7 8)
         COMBO(lbrkt, &kp LBKT, 26 27)
         COMBO(rbrkt, &kp RBKT, 27 28)
     };
