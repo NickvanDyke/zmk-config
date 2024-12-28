@@ -61,8 +61,8 @@
         // bottom-middle
         COMBO(grave, &kp GRAVE, 10 20)
         COMBO(tilde, &kp TILDE, 11 21)
-        COMBO(quote, &kp SQT, 12 22)
-        COMBO(dquote, &kp DQT, 13 23)
+        COMBO(quote, &kp COLON, 12 22)
+        COMBO(dquote, &kp SEMI, 13 23)
         COMBO(under, &kp UNDER, 14 24)
         
         COMBO(plus, &kp PLUS, 15 25)
@@ -89,7 +89,7 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SEMI)
+            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
