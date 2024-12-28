@@ -40,10 +40,44 @@
     combos {
         compatible = "zmk,combos";
 
-        COMBO(tab, &kp TAB, 13 14)
+        COMBO(esc, &kp ESC, 13 14)
+        COMBO(tab, &kp TAB, 23 24)
+
+        COMBO(bspc, &kp BSPC, 15 16)
+        COMBO(enter, &kp ENTER, 25 26)
 
         // Symbols
+        // top-middle
+        COMBO(excl, &kp EXCL, 1 11)
+        COMBO(at, &kp AT, 2 12)
+        COMBO(hash, &kp HASH, 3 13)
+        COMBO(dllr, &kp DLLR, 4 14)
 
+        COMBO(prcnt, &kp PRCNT, 5 15)
+        COMBO(caret, &kp CARET, 6 16)
+        COMBO(amp, &kp AMPS, 7 17)
+        COMBO(astk, &kp ASTRK, 8 18)
+
+        // bottom-middle
+        COMBO(grave, &kp GRAVE, 10 20)
+        COMBO(tilde, &kp TILDE, 11 21)
+        COMBO(quote, &kp SQT, 12 22)
+        COMBO(dquote, &kp DQT, 13 23)
+        COMBO(equal, &kp EQUAL, 14 24)
+        
+        COMBO(under, &kp UNDER, 15 25)
+        COMBO(minus, &kp MINUS, 16 26)
+        COMBO(plus, &kp PLUS, 17 27)
+        COMBO(pipe, &kp PIPE, 18 28)
+        COMBO(backslash, &kp BSLH, 19 29)
+
+        // cols 7-8
+        COMBO(lt, &kp LT, 6 7)
+        COMBO(gt, &kp GT, 7 8)
+        COMBO(lparen, &kp LPAR, 16 17)
+        COMBO(rparen, &kp RPAR, 17 18)
+        COMBO(lbrkt, &kp LBKT, 26 27)
+        COMBO(rbrkt, &kp RBKT, 27 28)
     };
 
     keymap {
@@ -55,7 +89,7 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
+            HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SEMI)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
@@ -65,34 +99,34 @@
             >;
         };
 
-        right_layer {
+        num_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│ INSERT   │  1       │  2       │  3       │          │   │ HOME     │ PAGE DN  │ PAGE UP  │ END      │  :       │
-            &kp INS    &kp N1     &kp N2     &kp N3     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp COLON
+        //│  1       │  2       │  3       │  4       │  5       │   │ 6        │ 7        │ 8        │ 9        │ 0        │
+            &trans     &kp N7     &kp N8     &kp N9     &trans         &trans     &kp F7     &kp F8     &kp F9     &kp F12
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ DELETE   │  4       │  5       │  6       │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │  ;       │
-            &kp DEL    &kp N4     &kp N5     &kp N6     &trans         &kp LEFT   &kp DOWN   &kp UP   &kp RIGHT   &kp SEMI
+        //│  F1      │  F2      │  F3      │  F4      │  F5      │   │ F6       │ F7       │ F8       │ F9       │ F0       │
+            &kp N0     &kp N4     &kp N5     &kp N6     &trans         &trans     &kp F4     &kp F5     &kp F6     &kp F11
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ CAPS     │  7       │  8       │  9       │  0       │   │          │          │          │          │          │
-           &caps_word  &kp N7     &kp N8     &kp N9     &kp N0         &trans     &trans     &trans     &trans     &trans
+        //│  F11     │  F12     │          │          │          │   │          │          │          │          │          │
+            &kp N0     &kp N1     &kp N2     &kp N3     &trans         &trans     &kp F1     &kp F2     &kp F3     &kp F10
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &kp ESC        &trans     &trans
+                                             &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
-        left_layer {
+        nav_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │  [       │  {       │  }       │          │   │  ^       │  (       │  )       │  ]       │  ~       │
-            &trans     &kp LBKT   &kp LBRC   &kp RBRC   &trans         &kp CARET  &kp LPAR   &kp RPAR   &kp RBKT   &kp TILDE
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans     &trans         &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  !       │  @       │  #       │  $       │  %       │   │  *       │  -       │  =       │  \       │  `       │
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT      &kp ASTRK  &kp MINUS  &kp EQUAL  &kp BSLH   &kp GRAVE
+        //│          │          │          │          │          │   │ LEFT     │ DOWN     │ UP       │ RIGHT    │ ;        │
+            &trans     &trans     &trans     &trans     &trans         &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT   &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │          │          │          │   │  &       │  _       │  +       │  │       │          │
-            &trans     &trans     &trans     &trans     &trans         &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+        //│          │          │          │          │          │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &trans     &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
