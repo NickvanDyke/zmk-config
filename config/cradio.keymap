@@ -48,27 +48,29 @@
 
         // Symbols
         // top-middle
-        COMBO(excl, &kp EXCL, 1 11)
-        COMBO(at, &kp AT, 2 12)
-        COMBO(hash, &kp HASH, 3 13)
-        COMBO(dllr, &kp DLLR, 4 14)
+        COMBO(excl, &kp EXCL, 0 10)
 
-        COMBO(prcnt, &kp PRCNT, 5 15)
-        COMBO(caret, &kp CARET, 6 16)
-        COMBO(amp, &kp AMPS, 7 17)
-        COMBO(astk, &kp ASTRK, 8 18)
+        COMBO(at,   &kp AT,   1 11)
+        COMBO(hash, &kp HASH, 2 12)
+        COMBO(dllr, &kp DLLR, 3 13)
+        COMBO(prcnt, &kp PRCNT, 4 14)
+
+        COMBO(caret, &kp CARET, 5 15)
+        COMBO(plus, &kp PLUS, 6 7)
+        COMBO(astk, &kp ASTRK, 7 17)
+        COMBO(amp, &kp AMPS, 8 18)
 
         // bottom-middle
-        COMBO(grave, &kp GRAVE, 10 20)
-        COMBO(tilde, &kp TILDE, 11 21)
-        COMBO(quote, &kp COLON, 12 22)
-        COMBO(dquote, &kp SEMI, 13 23)
-        COMBO(under, &kp UNDER, 14 24)
-        
-        COMBO(plus, &kp PLUS, 15 25)
+        COMBO(grave, &kp GRAVE, 11 21)
+        COMBO(colon, &kp COLON, 12 22)
+        COMBO(equal, &kp EQUAL, 13 23)
+        COMBO(tilde, &kp TILDE, 14 24)
+
+        COMBO(under, &kp UNDER, 15 25)
         COMBO(minus, &kp MINUS, 16 26)
-        COMBO(equal, &kp EQUAL, 17 27)
+        COMBO(dquote, &kp SEMI, 17 27)
         COMBO(pipe, &kp PIPE, 18 28)
+
         COMBO(backslash, &kp BSLH, 19 29)
 
         // cols 7-8
