@@ -1,6 +1,11 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
+// NOTE: If it won't re-pair with Macbook:
+// 1. Remove from MacOS
+// 2. BT_CLR every profile
+// 3. Connect in MacOS
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -56,7 +61,7 @@
         COMBO(prcnt, &kp PRCNT, 4 14)
 
         COMBO(caret, &kp CARET, 5 15)
-        COMBO(plus, &kp PLUS, 6 7)
+        COMBO(plus, &kp PLUS, 6 16)
         COMBO(astk, &kp ASTRK, 7 17)
         COMBO(amp, &kp AMPS, 8 18)
 
