@@ -130,7 +130,7 @@
             &kp F12    &kp F7     &kp F8     &kp F9     &trans         &C_BRI_MIN &C_BRI_DN  &C_BRI_UP  &C_BRI_MAX &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-           HRML(F11,   F4,        F5,        F6)        &trans         &C_PREV   HRMR(C_VOL_DOWN, C_VOL_UP, C_NEXT, C_MUTE)
+           HRML(F11,   F4,        F5,        F6)        &trans         &C_PREV   HRMR(C_VOL_DN, C_VOL_UP, C_NEXT, C_MUTE)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp F10    &kp F1     &kp F2     &kp F3     &trans         &trans     &trans     &trans     &trans     &trans
