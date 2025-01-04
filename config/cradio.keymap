@@ -42,11 +42,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-        lpar_lt: MOD_MORPH(lpar_lt, <(LSHFT|RSHFT)>, <&kp LPAR>, <&kp LT>)
-        rpar_gt: MOD_MORPH(rpar_gt, <(LSHFT|RSHFT)>, <&kp RPAR>, <&kp GT>)
+        lpar_lt: MOD_MORPH(lpar_lt, <(MOD_LSFT|MOD_RSFT)>, <&kp LPAR>, <&kp LT>)
+        rpar_gt: MOD_MORPH(rpar_gt, <(MOD_LSFT|MOD_RSFT)>, <&kp RPAR>, <&kp GT>)
 
-        comma_semi: MOD_MORPH(comma_semi, <(LSHFT|RSHFT)>, <&kp COMMA>, <&kp SEMI>)
-        dot_colon: MOD_MORPH(dot_colon, <(LSHFT|RSHFT)>, <&kp DOT>, <&kp COLON>)
+        comma_semi: MOD_MORPH(comma_semi, <(MOD_LSFT|MOD_RSFT)>, <&kp COMMA>, <&kp SEMI>)
+        dot_colon: MOD_MORPH(dot_colon, <(MOD_LSFT|MOD_RSFT)>, <&kp DOT>, <&kp COLON>)
     };
 
     conditional_layers {
