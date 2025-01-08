@@ -49,6 +49,14 @@
             bindings = <&kp>, <&kp>;
         };
 
+        ss_cw: sticky_shift_caps_word {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&sk LSHIFT>, <&caps_word>;
+        };
+    }
+
         lpar_lt: MOD_MORPH(lpar_lt, SFT, <&kp LPAR>, <&kp LT>)
         rpar_gt: MOD_MORPH(rpar_gt, SFT, <&kp RPAR>, <&kp GT>)
 
@@ -119,7 +127,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M     &comma_semi &dot_colon &question_excl
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &mo 1      &sk LSHIFT     &kp SPACE  &mo 2
+                                             &mo 1      &ss_cw         &kp SPACE  &mo 2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
