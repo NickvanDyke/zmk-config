@@ -33,6 +33,10 @@
 #define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
 #define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RCTRL k2  &ht RALT k3  &ht RGUI k4
 
+&sk {
+    quick-release;
+}
+
 / {
     behaviors {
         ht: hold_tap {
@@ -115,7 +119,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M     &comma_semi &dot_colon &question_excl
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &mo 1      &kp LSHFT      &kp SPACE  &mo 2
+                                             &mo 1      &sk LSHIFT     &kp SPACE  &mo 2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
