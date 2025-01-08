@@ -46,6 +46,7 @@
 
         comma_semi: MOD_MORPH(comma_semi, SFT, <&kp COMMA>, <&kp SEMICOLON>)
         dot_colon: MOD_MORPH(dot_colon, SFT, <&kp DOT>, <&kp COLON>)
+        question_excl: MOD_MORPH(question_excl, SFT, <&kp QUESTION>, <&kp EXCL>)
     };
 
     conditional_layers {
@@ -81,13 +82,13 @@
 
         // middle-bottom
         COMBO(grave, &kp GRAVE, 11 21)
-        COMBO(colon, &kp COLON, 12 22)
+        COMBO(bslh, &kp BSLH, 12 22)
         COMBO(equal, &kp EQUAL, 13 23)
         COMBO(tilde, &kp TILDE, 14 24)
 
         COMBO(under, &kp UNDER, 15 25)
         COMBO(minus, &kp MINUS, 16 26)
-        COMBO(semi, &kp SEMI, 17 27)
+        COMBO(fslh, &kp FSLH, 17 27)
         COMBO(pipe, &kp PIPE, 18 28)
 
         COMBO(backslash, &kp BSLH, 19 29)
@@ -111,7 +112,7 @@
             HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │          │          │          │   │          │          │          │          │          │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M     &comma_semi &dot_colon &kp FSLH
+            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M     &comma_semi &dot_colon &question_excl
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &mo 1      &kp LSHFT      &kp SPACE  &mo 2
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -144,7 +145,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             HRML(N0,       N4,        N5,        N6)    &trans         &kp C_PREV   HRMR(C_VOL_DN, C_VOL_UP, C_NEXT, C_MUTE)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  F11     │  F12     │          │          │          │   │          │          │          │          │          │
+        //│          │          │          │          │          │   │          │          │          │          │          │
             &kp N0     &kp N1     &kp N2     &kp N3     &trans         &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &trans         &kp C_PP      &trans
