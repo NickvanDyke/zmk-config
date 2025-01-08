@@ -64,6 +64,7 @@
     combos {
         compatible = "zmk,combos";
 
+        // TODO: Maybe put HRMs here too, so I can instantaneously chord them
         COMBO(esc, &kp ESC, 11 12, COMBO_TERM_FAST)
         COMBO(tab, &kp TAB, 12 13, COMBO_TERM_FAST)
 
