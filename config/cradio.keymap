@@ -20,7 +20,7 @@
 
 #define COMBO(NAME, BINDINGS, KEYPOS) \
   combo_##NAME { \
-    timeout-ms = <30>; \
+    timeout-ms = <50>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
   };
@@ -35,9 +35,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <220>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
+            require-prior-idle-ms = <120>;
             bindings = <&kp>, <&kp>;
         };
 
