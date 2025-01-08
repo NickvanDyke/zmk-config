@@ -55,7 +55,6 @@
             tapping-term-ms = <200>;
             bindings = <&sk LSHIFT>, <&caps_word>;
         };
-    }
 
         lpar_lt: MOD_MORPH(lpar_lt, SFT, <&kp LPAR>, <&kp LT>)
         rpar_gt: MOD_MORPH(rpar_gt, SFT, <&kp RPAR>, <&kp GT>)
