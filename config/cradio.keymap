@@ -26,8 +26,8 @@
   };
 
 // Lower term for horizontal combos to not trigger while rolling
-#define COMBO_TERM_FAST 20
-#define COMBO_TERM_SLOW 40
+#define COMBO_TERM_FAST 30
+#define COMBO_TERM_SLOW 50
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
