@@ -29,9 +29,12 @@
 #define COMBO_TERM_FAST 30
 #define COMBO_TERM_SLOW 50
 
+#define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31
+#define KEYS_R 5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33
+
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht LGUI k1  &ht LALT k2  &ht LCTRL k3  &ht LSHFT k4
-#define HRMR(k1,k2,k3,k4) &ht RSHFT k1  &ht RCTRL k2  &ht RALT k3  &ht RGUI k4
+#define HRML(k1,k2,k3,k4) &lh_pht LGUI k1  &lh_pht LALT k2  &lh_pht LCTRL k3  &lh_pht LSHFT k4
+#define HRMR(k1,k2,k3,k4) &rh_pht RSHFT k1  &rh_pht RCTRL k2  &rh_pht RALT k3  &rh_pht RGUI k4
 
 &sk {
     quick-release;
@@ -39,7 +42,7 @@
 
 / {
     behaviors {
-        ht: hold_tap {
+        lh_pht: left_positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "balanced";
@@ -47,6 +50,18 @@
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R>;
+        };
+
+        rh_pht: right_positional_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L>;
         };
 
         ss_cw: sticky_shift_caps_word {
