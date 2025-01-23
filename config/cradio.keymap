@@ -51,6 +51,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_R>;
+            hold-trigger-on-release;
         };
 
         rh_pht: right_positional_hold_tap {
@@ -62,6 +63,7 @@
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = <KEYS_L>;
+            hold-trigger-on-release;
         };
 
         ss_cw: sticky_shift_caps_word {
