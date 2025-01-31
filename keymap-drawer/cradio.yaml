@@ -1,0 +1,191 @@
+layout: {qmk_keyboard: ferris_rotated}
+layers:
+  default:
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - {t: A, h: LGUI}
+  - {t: S, h: LALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LSHFT}
+  - G
+  - H
+  - {t: J, h: RSHFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RALT}
+  - {t: '''', h: RGUI}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - {t: ',', s: ;}
+  - {t: ., s: ':'}
+  - {t: '?', s: '!'}
+  - first
+  - '&ss_cw'
+  - SPACE
+  - second
+  first:
+  - F12
+  - F7
+  - F8
+  - F9
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: F11, h: LGUI}
+  - {t: F4, h: LALT}
+  - {t: F5, h: LCTRL}
+  - {t: F6, h: LSHFT}
+  - {t: ▽, type: trans}
+  - LEFT
+  - {t: DOWN, h: RSHFT}
+  - {t: UP, h: RCTRL}
+  - {t: RIGHT, h: RALT}
+  - {t: ENTER, h: RGUI}
+  - F10
+  - F1
+  - F2
+  - F3
+  - {t: ▽, type: trans}
+  - HOME
+  - PG DN
+  - PG UP
+  - END
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  second:
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: '0', h: LGUI}
+  - {t: '4', h: LALT}
+  - {t: '5', h: LCTRL}
+  - {t: '6', h: LSHFT}
+  - {t: ▽, type: trans}
+  - PREV
+  - {t: VOL DN, h: RSHFT}
+  - {t: VOL UP, h: RCTRL}
+  - {t: NEXT, h: RALT}
+  - {t: MUTE, h: RGUI}
+  - '0'
+  - '1'
+  - '2'
+  - '3'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BRI DN
+  - BRI UP
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - PP
+  - {type: held}
+  tri:
+  - '&sys_reset'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: BT, h: '0'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&sys_reset'
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: BT, h: '1'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&bootloader'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - BT CLR
+  - {t: BT, h: '2'}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+combos:
+- p: [11, 12]
+  k: ESC
+- p: [12, 13]
+  k: TAB
+- p: [17, 18]
+  k: BSPC
+- p: [16, 17]
+  k: ENTER
+- p: [1, 11]
+  k: '@'
+- p: [2, 12]
+  k: '#'
+- p: [3, 13]
+  k: $
+- p: [4, 14]
+  k: '%'
+- p: [5, 15]
+  k: ^
+- p: [6, 16]
+  k: +
+- p: [7, 17]
+  k: '*'
+- p: [8, 18]
+  k: '&'
+- p: [11, 21]
+  k: '`'
+- p: [12, 22]
+  k: \
+- p: [13, 23]
+  k: '='
+- p: [14, 24]
+  k: '~'
+- p: [15, 25]
+  k: _
+- p: [16, 26]
+  k: '-'
+- p: [17, 27]
+  k: /
+- p: [18, 28]
+  k: '|'
+- p: [6, 7]
+  k: {t: (, s: <}
+- p: [7, 8]
+  k: {t: ), s: '>'}
+- p: [26, 27]
+  k: '['
+- p: [27, 28]
+  k: ']'
