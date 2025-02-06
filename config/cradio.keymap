@@ -25,8 +25,7 @@
     key-positions = <KEYPOS>; \
   };
 
-// Lower term for horizontal combos to not trigger while rolling
-#define COMBO_TERM_FAST 35
+#define COMBO_TERM_FAST 40
 #define COMBO_TERM_SLOW 70
 
 #define KEYS_L 0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31
