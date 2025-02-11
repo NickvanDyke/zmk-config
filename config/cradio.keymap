@@ -18,12 +18,16 @@
     bindings = BINDING_1, BINDING_2; \
   };
 
-#define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT) \
+#define COMBO(NAME, BINDINGS, KEYPOS, TIMEOUT, IDLE) \
   combo_##NAME { \
     timeout-ms = <TIMEOUT>; \
     bindings = <BINDINGS>; \
     key-positions = <KEYPOS>; \
+    require-prior-idle-ms = <IDLE>; \
   };
+
+#define COMBO_IDLE_FAST 150
+#define COMBO_IDLE_SLOW 50
 
 #define COMBO_TERM_FAST 40
 #define COMBO_TERM_SLOW 70
@@ -92,40 +96,40 @@
         compatible = "zmk,combos";
 
         // TODO: Maybe put HRMs here too, so I can instantaneously chord them
-        COMBO(esc, &kp ESC, 11 12, COMBO_TERM_FAST)
-        COMBO(tab, &kp TAB, 12 13, COMBO_TERM_FAST)
+        COMBO(esc, &kp ESC, 11 12, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+        COMBO(tab, &kp TAB, 12 13, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-        COMBO(bspc, &kp BSPC, 17 18, COMBO_TERM_FAST)
-        COMBO(enter, &kp ENTER, 16 17, COMBO_TERM_FAST)
+        COMBO(bspc, &kp BSPC, 17 18, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+        COMBO(enter, &kp ENTER, 16 17, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
         // Symbols
         // top-middle
-        COMBO(at,   &kp AT,   1 11, COMBO_TERM_SLOW)
-        COMBO(hash, &kp HASH, 2 12, COMBO_TERM_SLOW)
-        COMBO(dllr, &kp DLLR, 3 13, COMBO_TERM_SLOW)
-        COMBO(prcnt, &kp PRCNT, 4 14, COMBO_TERM_SLOW)
+        COMBO(at,   &kp AT,   1 11, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(hash, &kp HASH, 2 12, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(dllr, &kp DLLR, 3 13, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(prcnt, &kp PRCNT, 4 14, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-        COMBO(caret, &kp CARET, 5 15, COMBO_TERM_SLOW)
-        COMBO(plus, &kp PLUS, 6 16, COMBO_TERM_SLOW)
-        COMBO(astk, &kp ASTRK, 7 17, COMBO_TERM_SLOW)
-        COMBO(amp, &kp AMPS, 8 18, COMBO_TERM_SLOW)
+        COMBO(caret, &kp CARET, 5 15, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(plus, &kp PLUS, 6 16, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(astk, &kp ASTRK, 7 17, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(amp, &kp AMPS, 8 18, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
         // middle-bottom
-        COMBO(grave, &kp GRAVE, 11 21, COMBO_TERM_SLOW)
-        COMBO(bslh, &kp BSLH, 12 22, COMBO_TERM_SLOW)
-        COMBO(equal, &kp EQUAL, 13 23, COMBO_TERM_SLOW)
-        COMBO(tilde, &kp TILDE, 14 24, COMBO_TERM_SLOW)
+        COMBO(grave, &kp GRAVE, 11 21, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(bslh, &kp BSLH, 12 22, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(equal, &kp EQUAL, 13 23, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(tilde, &kp TILDE, 14 24, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
-        COMBO(under, &kp UNDER, 15 25, COMBO_TERM_SLOW)
-        COMBO(minus, &kp MINUS, 16 26, COMBO_TERM_SLOW)
-        COMBO(fslh, &kp FSLH, 17 27, COMBO_TERM_SLOW)
-        COMBO(pipe, &kp PIPE, 18 28, COMBO_TERM_SLOW)
+        COMBO(under, &kp UNDER, 15 25, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(minus, &kp MINUS, 16 26, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(fslh, &kp FSLH, 17 27, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+        COMBO(pipe, &kp PIPE, 18 28, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
 
         // cols 7-8
-        COMBO(lparen, &lpar_lt, 6 7, COMBO_TERM_FAST)
-        COMBO(rparen, &rpar_gt, 7 8, COMBO_TERM_FAST)
-        COMBO(lbrkt, &kp LBKT, 26 27, COMBO_TERM_FAST)
-        COMBO(rbrkt, &kp RBKT, 27 28, COMBO_TERM_FAST)
+        COMBO(lparen, &lpar_lt, 6 7, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+        COMBO(rparen, &rpar_gt, 7 8, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+        COMBO(lbrkt, &kp LBKT, 26 27, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+        COMBO(rbrkt, &kp RBKT, 27 28, COMBO_TERM_FAST, COMBO_IDLE_FAST)
     };
 
     keymap {
