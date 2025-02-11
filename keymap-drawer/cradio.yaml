@@ -95,15 +95,15 @@ layers:
   - '1'
   - '2'
   - '3'
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - .
+  - PP
   - BRI DN
   - BRI UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - PP
+  - {t: ▽, type: trans}
   - {type: held}
   tri:
   - '&sys_reset'
